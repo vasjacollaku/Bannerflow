@@ -1,0 +1,46 @@
+﻿@model VasjaCollakuBETest.Models.Banner
+
+@{
+    ViewBag.Title = "Render";
+}
+
+@{
+    Layout = null;
+}
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <div>@Html.Raw(Model.Html)</div>
+
+    </div>
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+}
+
+    @*
+        <!DOCTYPE html>
+
+        <html>
+        <head>
+            <meta name="viewport" content="width=device-width" />
+            <title>Render</title>
+        </head>
+        <body>
+            <div>
+
+                @*  @Model.Html *@
+    @*        <div>@Html.Raw(Model.Html)</div>
+
+            </div>
+            <div>
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        </body>
+        </html> *@
+
